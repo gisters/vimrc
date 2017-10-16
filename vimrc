@@ -58,6 +58,12 @@ set number
 set list!                           " Display unprintable characters
 set listchars=tab:▸\ ,trail:•,extends:»,precedes:«
 
+" Encoding
+set encoding=utf-8
+set termencoding=utf-8
+set fileencoding=utf-8
+set fileencodings=ucs-bom,utf-8,gb18030,big5,latin1
+
 " color
 try
     set t_Co=256
@@ -87,12 +93,6 @@ set modifiable
 set laststatus=2
 set mouse=a                         " Mouse wheel
 let g:netrw_home=$HOME.'/.vim/.swap'
-
-" Encoding
-set encoding=utf-8
-set termencoding=utf-8
-set fileencoding=utf-8
-set fileencodings=ucs-bom,utf-8,gb18030,big5,latin1
 
 " Formatting, indentation and tabbing
 set autoindent smartindent
