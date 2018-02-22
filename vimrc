@@ -132,9 +132,9 @@ autocmd BufReadPost *
             \ endif |
 
 " After 4s of inactivity, check for file modifications on next keyrpress
-au CursorHold * checktime
+autocmd CursorHold * checktime
 
-au FileType html setl sw=2 sts=2 et
+autocmd FileType html setl sw=2 sts=2 et
 
 """""""""""""""""""""""""
 " Keybindings
