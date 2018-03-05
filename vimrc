@@ -150,7 +150,7 @@ map <ScrollWheelDown>   3j
 nmap <Leader>s  :%S/
 vmap <Leader>s  :S/
 
-vnoremap .  :normal .<CR>
+vnoremap .  :normal .<cr>
 vnoremap @  :normal! @
 
 " up/down on displayed lines, not real lines. More useful than painful.
@@ -158,13 +158,13 @@ noremap k   gk
 noremap j   gj
 
 " TODO toggle numbers
-map <Leader>/   :nohlsearch<cr>
-map <S-l>       :tabprevious<CR>
-map <S-h>       :tabnext<CR>
+nnoremap <Leader>/  :nohlsearch<cr>
+nnoremap <S-l>      :tabprevious<cr>
+nnoremap <S-h>      :tabnext<cr>
 
 " TODO Do also cnext and cprev as a fallback
-map <PageDown>  :lnext<CR>
-map <PageUp>    :lprev<CR>
+noremap <PageDown>  :lnext<cr>
+noremap <PageUp>    :lprev<cr>
 
 " Disable K for manpages - not used often and easy to accidentally hit
 noremap K   k
@@ -178,8 +178,8 @@ nnoremap <C-l>  3<C-w>>
 nnoremap _  :split<cr>
 nnoremap \| :vsplit<cr>
 
-vmap s  :!sort<CR>
-vmap u  :!sort -u<CR>
+vmap s  :!sort<cr>
+vmap u  :!sort -u<cr>
 
 " Write file when you forget to use sudo
 cmap w!!    w !sudo tee % >/dev/null
@@ -203,6 +203,8 @@ if !empty(glob('~/.vim/bundle/vim-airline'))
     if !exists('g:airline_symbols')
         let g:airline_symbols = {}
     endif
+    let g:airline#extensions#tabline#enabled = 1
+    let g:airline#extensions#tabline#buffer_nr_show = 1
 endif
 
 
