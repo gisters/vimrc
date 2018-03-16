@@ -55,6 +55,7 @@ set cursorline
 set number
 "set relativenumber
 set title
+set t_ti= t_te=
 set ruler
 set virtualedit=onemore             " block, insert, all, onemore
 set list!                           " Display unprintable characters
@@ -109,7 +110,7 @@ set smarttab                        " Make <tab> and <backspace> smarter
 set expandtab
 "set noexpandtab
 set tabstop=4 softtabstop=4 shiftwidth=4
-"set formatoptions-=t formatoptions+=croql
+set formatoptions-=t formatoptions+=croql
 set modeline
 
 " Undo
