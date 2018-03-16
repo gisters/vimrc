@@ -20,7 +20,6 @@ set viminfo=%100,'100,/100,h,\"500,:1000,n$HOME/.vim/.swap/viminfo
 """""""""""""""""""""""""
 " vim-plug
 """""""""""""""""""""""""
-
 if empty(glob('~/.vim/autoload/plug.vim'))
     silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
                 \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -50,11 +49,14 @@ call plug#end()
 """""""""""""""""""""""""
 " global
 """""""""""""""""""""""""
-
 syntax on
 set cursorline
 "set cursorcolumn
 set number
+"set relativenumber
+set title
+set ruler
+set virtualedit=onemore             " block, insert, all, onemore
 set list!                           " Display unprintable characters
 set listchars=tab:▸\ ,trail:•,extends:»,precedes:«
 
@@ -63,8 +65,10 @@ set encoding=utf-8
 set termencoding=utf-8
 set fileencoding=utf-8
 set fileencodings=ucs-bom,utf-8,gb18030,big5,latin1
+set langmenu=zh_CN.UTF-8
+set helplang=cn
 
-" color
+" colorscheme
 try
     set t_Co=256
     colorscheme molokai
@@ -81,9 +85,12 @@ set wildmode=list:longest,full
 set backspace=eol,start,indent      " Allow backspace
 set complete=.,w,b,u,U,t,i,d        " Do lots of scanning on tab completion
 set updatecount=100                 " Write swap file to disk every 100 chars
+"set autochdir
 set directory=$HOME/.vim/.swap      " Directory to use for the swap file
 set diffopt=filler,iwhite
 set history=10000
+"set wrap
+"set linebreak
 set scrolloff=3
 set visualbell t_vb=                " Disable error bells
 set shortmess+=A                    " Always edit file
@@ -93,16 +100,16 @@ set modifiable
 set laststatus=2
 set mouse=a                         " Mouse wheel
 let g:netrw_home=$HOME.'/.vim/.swap'
+"set showcmd
+"set magic
 
 " Formatting, indentation and tabbing
 set autoindent smartindent
 set smarttab                        " Make <tab> and <backspace> smarter
 set expandtab
 "set noexpandtab
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set formatoptions-=t formatoptions+=croql
+set tabstop=4 softtabstop=4 shiftwidth=4
+"set formatoptions-=t formatoptions+=croql
 set modeline
 
 " Undo
@@ -114,16 +121,18 @@ if has("persistent_undo")
 endif
 
 " Search settings
-set ignorecase
-set smartcase
-set hlsearch
-set incsearch
-set showmatch
+set ignorecase                      " ignore case buring search
+set smartcase                       " ignore 'ignorecase' when UPPer in search
+set hlsearch                        " highlight search
+set incsearch                       " do incremental searching
+set showmatch                       " show matching parenthese
+set wrapscan
 
-" Stoping automatic wrapping and highlight colorcolumn
 set textwidth=0
-autocmd FileType cmake,css,fortran,lisp,make,perl,sh,vim
-            \ setlocal textwidth=78 colorcolumn=+1
+autocmd FileType cmake,css,fortran,lisp,make,perl,sh,c,cpp,vim
+            \ setlocal textwidth=78 colorcolumn=+1 wrap linebreak
+            \ formatoptions+=t
+autocmd FileType html setlocal shiftwidth=2 softtabstop=2 expandtab
 
 " When opening a file, always jump to the last cursor position
 autocmd BufReadPost *
@@ -134,8 +143,6 @@ autocmd BufReadPost *
 " After 4s of inactivity, check for file modifications on next keyrpress
 autocmd CursorHold * checktime
 
-autocmd FileType html setl sw=2 sts=2 et
-
 """""""""""""""""""""""""
 " Keybindings
 """""""""""""""""""""""""
@@ -143,24 +150,24 @@ let mapleader=","
 let localmapleader=","
 
 " Follow scroll wheel to cursor
-map <ScrollWheelUp>     3k
-map <ScrollWheelDown>   3j
+noremap <ScrollWheelUp>     3k
+noremap <ScrollWheelDown>   3j
 
 
-nmap <Leader>s  :%S/
-vmap <Leader>s  :S/
+nnoremap <Leader>s  :%S/
+vnoremap <Leader>s  :S/
 
 vnoremap .  :normal .<cr>
 vnoremap @  :normal! @
 
 " up/down on displayed lines, not real lines. More useful than painful.
-noremap k   gk
-noremap j   gj
+nnoremap k   gk
+nnoremap j   gj
 
 " TODO toggle numbers
-nnoremap <Leader>/  :nohlsearch<cr>
-nnoremap <S-l>      :tabprevious<cr>
-nnoremap <S-h>      :tabnext<cr>
+noremap <Leader>/  :nohlsearch<cr>
+noremap <S-l>      :tabprevious<cr>
+noremap <S-h>      :tabnext<cr>
 
 " TODO Do also cnext and cprev as a fallback
 noremap <PageDown>  :lnext<cr>
@@ -178,8 +185,8 @@ nnoremap <C-l>  3<C-w>>
 nnoremap _  :split<cr>
 nnoremap \| :vsplit<cr>
 
-vmap s  :!sort<cr>
-vmap u  :!sort -u<cr>
+vnoremap s  :!sort<cr>
+vnoremap u  :!sort -u<cr>
 
 " Write file when you forget to use sudo
 cmap w!!    w !sudo tee % >/dev/null
