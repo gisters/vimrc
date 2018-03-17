@@ -55,7 +55,7 @@ set cursorline
 set number
 "set relativenumber
 set title
-set t_ti= t_te=
+"set t_ti= t_te=
 set ruler
 set virtualedit=onemore             " block, insert, all, onemore
 set list!                           " Display unprintable characters
