@@ -98,7 +98,7 @@ set shortmess+=A                    " Always edit file
 set nobackup                        " close backup files
 set nowritebackup
 set modifiable
-set laststatus=2
+"set laststatus=2
 set mouse=a                         " Mouse wheel
 let g:netrw_home=$HOME.'/.vim/.swap'
 "set showcmd
@@ -213,6 +213,8 @@ if !empty(glob('~/.vim/bundle/vim-airline'))
     endif
     let g:airline#extensions#tabline#enabled = 1
     let g:airline#extensions#tabline#buffer_nr_show = 1
+    let g:airline#extensions#tabline#formatter = 'unique_tail'
+    let g:airline_symbols.branch = '⎇'
 endif
 
 
