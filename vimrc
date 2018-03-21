@@ -66,8 +66,8 @@ set encoding=utf-8
 set termencoding=utf-8
 set fileencoding=utf-8
 set fileencodings=ucs-bom,utf-8,gb18030,big5,latin1
-set langmenu=zh_CN.UTF-8
-set helplang=cn
+"set langmenu=zh_CN.UTF-8
+"set helplang=cn
 
 " colorscheme
 try
