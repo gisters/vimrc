@@ -234,7 +234,7 @@ if !empty(glob('~/.vim/bundle/nerdtree'))
     nnoremap <C-n> :NERDTreeToggle<cr>
     let NERDTreeIgnore = [ '\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$',
                 \ '\.so$', '\.egg$', '^\.git$', '\.cmi', '\.cmo', '\.elc$',
-                \ '\.doc\?', '\.xls\?', '\.ppt\?', '\.rtf$', '\.iso$', '\.o$'
+                \ '\.doc\?', '\.xls\?', '\.ppt\?', '\.rtf$', '\.iso$', '\.o$',
                 \ '\.img', '\.jp\+g$', '\.png$', '\.gif$', '\.svg$', '\.bmp$',
                 \ '\.tiff$', '\.pdf$' ]
     let NERDTreeHighlightCursorline = 1
