@@ -131,8 +131,7 @@ set wrapscan
 
 set textwidth=0
 autocmd FileType cmake,css,fortran,lisp,make,perl,sh,c,cpp,vim
-            \ setlocal textwidth=78 colorcolumn=+1 wrap linebreak
-            \ formatoptions+=t
+            \ setlocal textwidth=78 colorcolumn=+1 wrap linebreak formatoptions+=t
 autocmd FileType html setlocal shiftwidth=2 softtabstop=2 expandtab
 
 " When opening a file, always jump to the last cursor position
@@ -233,21 +232,21 @@ endif
 """""""""""""""""""""""""
 if !empty(glob('~/.vim/bundle/nerdtree'))
     nnoremap <C-n> :NERDTreeToggle<cr>
-    let NERDTreeIgnore=[ '\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$', '\.o$',
+    let NERDTreeIgnore = [ '\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$',
                 \ '\.so$', '\.egg$', '^\.git$', '\.cmi', '\.cmo', '\.elc$',
-                \ '\.doc\?', '\.xls\?', '\.ppt\?', '\.rtf$', '\.iso$',
+                \ '\.doc\?', '\.xls\?', '\.ppt\?', '\.rtf$', '\.iso$', '\.o$'
                 \ '\.img', '\.jp\+g$', '\.png$', '\.gif$', '\.svg$', '\.bmp$',
                 \ '\.tiff$', '\.pdf$' ]
-    let NERDTreeHighlightCursorline=1
-    let NERDTreeShowBookmarks=1
-    let NERDTreeShowFiles=1
+    let NERDTreeHighlightCursorline = 1
+    let NERDTreeShowBookmarks = 1
+    let NERDTreeShowFiles = 1
 endif
 
 """""""""""""""""""""""""
 " Signify
 """""""""""""""""""""""""
 if !empty(glob('~/.vim/bundle/vim-signify'))
-    let g:signify_vcs_list          = [ 'git', 'hg', 'svn' ]
+    let g:signify_vcs_list = [ 'git', 'hg', 'svn' ]
 endif
 
 """""""""""""""""""""""""
@@ -272,10 +271,10 @@ endif
 " Markdown
 """""""""""""""""""""""""
 if !empty(glob('~/.vim/bundle/vim-markdown'))
-    let g:vim_markdown_folding_disabled=1
-    let g:vim_markdown_no_default_key_mappings=1
-    let g:vim_markdown_math=1
-    let g:vim_markdown_frontmatter=1
+    let g:vim_markdown_folding_disabled = 1
+    let g:vim_markdown_no_default_key_mappings = 1
+    let g:vim_markdown_math = 1
+    let g:vim_markdown_frontmatter = 1
     let g:vim_markdown_math = 1
     let g:vim_markdown_json_frontmatter = 1
 endif
