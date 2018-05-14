@@ -5,7 +5,7 @@ Installation
 
 To install, run
 
-    $ git clone git://github.com/iHavee/vimrc.git ~/.vim
+    $ git clone git://github.com/vgist/vimrc.git ~/.vim
     $ cd ~/.vim && make install
 
 To update the repository, run
