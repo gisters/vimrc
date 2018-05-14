@@ -3,7 +3,7 @@ set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
 set guioptions-=L  "remove left-hand scroll bar
 
-set lines=50 columns=120
+set lines=50 columns=140
 autocmd VimEnter * set vb t_vb=
 
 " theme
@@ -14,8 +14,8 @@ catch
 endtry
 
 if has('unix')
-    if has("gui_macvim") || has("gui_mac") || has("mac")
-        set guifont=Monaco:h11
+    if has("mac")
+        set guifont=Monaco:h13
         map <F1> :set guifont=Monaco:h11<CR>
         map <F2> :set guifont=Monaco:h13<CR>
         macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-CR>   " Command + Enter

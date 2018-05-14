@@ -166,6 +166,8 @@ nnoremap j   gj
 
 " TODO toggle numbers
 noremap <Leader>/  :nohlsearch<cr>
+
+" tabprevious and tabnext
 noremap <S-l>      :tabprevious<cr>
 noremap <S-h>      :tabnext<cr>
 
@@ -182,6 +184,7 @@ nnoremap <C-j>  3<C-w>+
 nnoremap <C-h>  3<C-w><
 nnoremap <C-l>  3<C-w>>
 
+" Split window
 nnoremap _  :split<cr>
 nnoremap \| :vsplit<cr>
 
@@ -213,7 +216,9 @@ if !empty(glob('~/.vim/bundle/vim-airline'))
     let g:airline#extensions#tabline#enabled = 1
     let g:airline#extensions#tabline#buffer_nr_show = 1
     let g:airline#extensions#tabline#formatter = 'unique_tail'
-    let g:airline_symbols.branch = '⎇'
+    if !has('gui')
+        let g:airline_symbols.branch = '⎇'
+    endif
 endif
 
 
