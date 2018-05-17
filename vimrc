@@ -35,7 +35,7 @@ Plug 'aperezdc/vim-template'
 Plug 'vim-airline/vim-airline', {'tag': 'v0.9'}
 Plug 'godlygeek/tabular', {'tag': '1.0.0'}
 Plug 'tpope/vim-fugitive', {'tag': 'v2.2'}
-Plug 'mhinz/vim-signify'
+Plug 'mhinz/vim-signify', {'tag': 'v1.9'}
 
 Plug 'elzr/vim-json'
 Plug 'darfink/vim-plist'
