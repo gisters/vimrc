@@ -7,19 +7,17 @@ if &compatible
 endif
 
 " viminfo: remember certain things when we exit
-" (http://vimdoc.sourceforge.net/htmldoc/usr_21.html)
-"   %    : saves and restores the buffer list
-"   '100 : marks will be remembered for up to 30 previously edited files
-"   /100 : save 100 lines from search history
-"   h    : disable hlsearch on start
-"   "500 : save up to 500 lines for each registeD
-"   :1000 : up to 1000 lines of command-line history will be remembered
-"   n... : where to save the viminfo files
-set viminfo=%100,'100,/100,h,\"500,:1000,n$HOME/.vim/.swap/viminfo
+set viminfo=%50,\"100,'20,/20,:50,h,f1,n$HOME/.vim/.swap/viminfo
+"           |    |    |   |   |   | |  + viminfo file path
+"           |    |    |   |   |   | + file marks 0-9,A-Z. 0 = not storeed
+"           |    |    |   |   |   + disable hlsearch loading viminfo
+"           |    |    |   |   + command line history saved
+"           |    |    |   + search history saved
+"           |    |    + file marks saved
+"           |    + lines saved each register (old name for <, vi6,2)
+"           + save/restore buffer list
 
-"""""""""""""""""""""""""
 " vim-plug
-"""""""""""""""""""""""""
 if empty(glob('~/.vim/autoload/plug.vim'))
     silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
                 \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -34,7 +32,7 @@ Plug 'tomasr/molokai'
 Plug 'aperezdc/vim-template'
 Plug 'vim-airline/vim-airline', {'tag': 'v0.9'}
 Plug 'godlygeek/tabular', {'tag': '1.0.0'}
-Plug 'tpope/vim-fugitive', {'tag': 'v2.3'}
+Plug 'tpope/vim-fugitive', {'tag': 'v2.4'}
 Plug 'mhinz/vim-signify', {'tag': 'v1.9'}
 
 Plug 'elzr/vim-json'
@@ -46,9 +44,7 @@ Plug 'hdima/python-syntax', {'tag': 'r3.5.0'}
 Plug 'fatih/vim-go', {'tag': 'v1.17'}
 call plug#end()
 
-"""""""""""""""""""""""""
 " global
-"""""""""""""""""""""""""
 syntax on
 set cursorline
 "set cursorcolumn
@@ -143,9 +139,7 @@ autocmd BufReadPost *
 " After 4s of inactivity, check for file modifications on next keyrpress
 autocmd CursorHold * checktime
 
-"""""""""""""""""""""""""
 " Keybindings
-"""""""""""""""""""""""""
 let mapleader=","
 let localmapleader=","
 
@@ -194,9 +188,7 @@ vnoremap u  :!sort -u<cr>
 " Write file when you forget to use sudo
 cmap w!!    w !sudo tee % >/dev/null
 
-"""""""""""""""""""""""""
 " Cscope
-"""""""""""""""""""""""""
 if has("cscope")
     set cscopetag
     set csto=0
@@ -206,9 +198,7 @@ if has("cscope")
     set cscopeverbose
 endif
 
-"""""""""""""""""""""""""
 " airline
-"""""""""""""""""""""""""
 if !empty(glob('~/.vim/bundle/vim-airline'))
     if !exists('g:airline_symbols')
         let g:airline_symbols = {}
@@ -222,9 +212,7 @@ if !empty(glob('~/.vim/bundle/vim-airline'))
 endif
 
 
-"""""""""""""""""""""""""
 " CSS3-Syntax
-"""""""""""""""""""""""""
 if !empty(glob('~/.vim/bundle/vim-css3-syntax'))
     augroup VimCSS3Syntax
         autocmd!
@@ -232,9 +220,7 @@ if !empty(glob('~/.vim/bundle/vim-css3-syntax'))
     augroup END
 endif
 
-"""""""""""""""""""""""""
 " NERDTree
-"""""""""""""""""""""""""
 if !empty(glob('~/.vim/bundle/nerdtree'))
     nnoremap <C-n> :NERDTreeToggle<cr>
     let NERDTreeIgnore = [ '\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$',
@@ -247,23 +233,17 @@ if !empty(glob('~/.vim/bundle/nerdtree'))
     let NERDTreeShowFiles = 1
 endif
 
-"""""""""""""""""""""""""
 " Signify
-"""""""""""""""""""""""""
 if !empty(glob('~/.vim/bundle/vim-signify'))
     let g:signify_vcs_list = [ 'git', 'hg', 'svn' ]
 endif
 
-"""""""""""""""""""""""""
 " Supertab
-"""""""""""""""""""""""""
 if !empty(glob('~/.vim/bundle/supertab'))
     let g:SuperTabDefaultCompletionType = "<c-n>"
 endif
 
-"""""""""""""""""""""""""
 " Markdown
-"""""""""""""""""""""""""
 if !empty(glob('~/.vim/bundle/vim-markdown'))
     let g:vim_markdown_folding_disabled = 1
     let g:vim_markdown_no_default_key_mappings = 1
@@ -273,23 +253,17 @@ if !empty(glob('~/.vim/bundle/vim-markdown'))
     let g:vim_markdown_json_frontmatter = 1
 endif
 
-"""""""""""""""""""""""""
 " Python syntax highligh
-"""""""""""""""""""""""""
 if !empty(glob('~/.vim/bundle/python-syntax'))
     let g:python_highlight_all = 1
 endif
 
-"""""""""""""""""""""""""
 " VIM JSON
-"""""""""""""""""""""""""
 if !empty(glob('~/.vim/bundle/vim-json'))
     let g:vim_json_syntax_conceal = 0
 endif
 
-"""""""""""""""""""""""""
 " Golang
-"""""""""""""""""""""""""
 if !empty(glob('~/.vim/bundle/vim-go'))
     let g:go_highlight_functions = 1
     let g:go_highlight_methods = 1
@@ -302,9 +276,7 @@ if !empty(glob('~/.vim/bundle/vim-go'))
     let g:go_fmt_autosave = 0
 endif
 
-"""""""""""""""""""""""""
 " Local config
-"""""""""""""""""""""""""
 silent! so $HOME/.vim/vimrc.mine
 
 " vim: set et fenc=utf-8 ff=unix sts=4 sw=4 ts=4 :
