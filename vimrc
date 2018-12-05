@@ -32,12 +32,12 @@ Plug 'tomasr/molokai'
 Plug 'aperezdc/vim-template'
 Plug 'vim-airline/vim-airline', {'tag': 'v0.9'}
 Plug 'godlygeek/tabular', {'tag': '1.0.0'}
-Plug 'tpope/vim-fugitive', {'tag': 'v2.4'}
+Plug 'tpope/vim-fugitive', {'tag': 'v2.5'}
 Plug 'mhinz/vim-signify', {'tag': 'v1.9'}
 
 Plug 'elzr/vim-json'
 Plug 'darfink/vim-plist'
-Plug 'hail2u/vim-css3-syntax', {'tag': 'v1.1.1'}
+Plug 'hail2u/vim-css3-syntax', {'tag': 'v1.2.0'}
 Plug 'plasticboy/vim-markdown'
 Plug 'pangloss/vim-javascript', {'tag': '1.2.5.1'}
 Plug 'hdima/python-syntax', {'tag': 'r3.5.0'}
