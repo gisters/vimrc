@@ -1,3 +1,5 @@
+:scriptencoding utf-8
+
 " Create needed folder
 silent !mkdir -p $HOME/.vim/.swap
 
