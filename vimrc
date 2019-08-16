@@ -57,7 +57,7 @@ set title
 set ruler
 set virtualedit=onemore             " block, insert, all, onemore
 set list!                           " Display unprintable characters
-set listchars=tab:▸\ ,trail:•,extends:»,precedes:«
+set listchars=tab:»\ ,trail:·,extends:›,precedes:«
 
 " Encoding
 set encoding=utf-8
