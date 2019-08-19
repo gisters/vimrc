@@ -1,4 +1,11 @@
-:scriptencoding utf-8
+" Encoding
+set encoding=utf-8
+scriptencoding utf-8
+set termencoding=utf-8
+set fileencoding=utf-8
+set fileencodings=ucs-bom,utf-8,gb18030,big5,latin1
+"set langmenu=zh_CN.UTF-8
+"set helplang=cn
 
 " Create needed folder
 silent !mkdir -p $HOME/.vim/.swap
@@ -57,15 +64,8 @@ set title
 set ruler
 set virtualedit=onemore             " block, insert, all, onemore
 set list!                           " Display unprintable characters
-set listchars=tab:»\ ,trail:·,extends:›,precedes:«
-
-" Encoding
-set encoding=utf-8
-set termencoding=utf-8
-set fileencoding=utf-8
-set fileencodings=ucs-bom,utf-8,gb18030,big5,latin1
-"set langmenu=zh_CN.UTF-8
-"set helplang=cn
+"set listchars=tab:»\ ,trail:·,extends:›,precedes:«
+set listchars=tab:▸\ ,trail:•,extends:»,precedes:«
 
 " colorscheme
 try
