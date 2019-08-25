@@ -36,12 +36,12 @@ endif
 call plug#begin('$HOME/.vim/bundle')
 Plug 'vim-scripts/Modeliner', {'tag': '0.3.0'}
 Plug 'ervandew/supertab', {'tag': '2.1'}
-Plug 'scrooloose/nerdtree', {'tag': '5.0.0', 'on': 'NERDTreeToggle'}
+Plug 'scrooloose/nerdtree', {'tag': '5.3.0', 'on': 'NERDTreeToggle'}
 Plug 'tomasr/molokai'
 Plug 'aperezdc/vim-template'
 Plug 'vim-airline/vim-airline', {'tag': 'v0.10'}
 Plug 'godlygeek/tabular', {'tag': '1.0.0'}
-Plug 'tpope/vim-fugitive', {'tag': 'v2.5'}
+Plug 'tpope/vim-fugitive', {'tag': 'v3.0'}
 Plug 'mhinz/vim-signify', {'tag': 'v1.9'}
 
 Plug 'elzr/vim-json'
