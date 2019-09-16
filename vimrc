@@ -36,7 +36,7 @@ endif
 call plug#begin('$HOME/.vim/bundle')
 Plug 'vim-scripts/Modeliner', {'tag': '0.3.0'}
 Plug 'ervandew/supertab', {'tag': '2.1'}
-Plug 'scrooloose/nerdtree', {'tag': '5.3.2', 'on': 'NERDTreeToggle'}
+Plug 'scrooloose/nerdtree', {'tag': '5.3.3', 'on': 'NERDTreeToggle'}
 Plug 'tomasr/molokai'
 Plug 'aperezdc/vim-template'
 Plug 'vim-airline/vim-airline', {'tag': 'v0.10'}
@@ -238,7 +238,7 @@ if !empty(glob('~/.vim/bundle/nerdtree'))
                 \ '\.so$', '\.egg$', '^\.git$', '\.cmi', '\.cmo', '\.elc$',
                 \ '\.doc\?', '\.xls\?', '\.ppt\?', '\.rtf$', '\.iso$', '\.o$',
                 \ '\.img', '\.jp\+g$', '\.png$', '\.gif$', '\.svg$', '\.bmp$',
-                \ '\.tiff$', '\.pdf$' ]
+                \ '\.tiff$', '\.pdf$', '\.numbers$' ]
     let NERDTreeHighlightCursorline = 1
     let NERDTreeShowBookmarks = 1
     let NERDTreeShowFiles = 1
