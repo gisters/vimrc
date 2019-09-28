@@ -36,7 +36,7 @@ endif
 call plug#begin('$HOME/.vim/bundle')
 Plug 'vim-scripts/Modeliner', {'tag': '0.3.0'}
 Plug 'ervandew/supertab', {'tag': '2.1'}
-Plug 'scrooloose/nerdtree', {'tag': '5.3.3', 'on': 'NERDTreeToggle'}
+Plug 'scrooloose/nerdtree', {'tag': '6.0.0'}
 Plug 'tomasr/molokai'
 Plug 'aperezdc/vim-template'
 Plug 'vim-airline/vim-airline', {'tag': 'v0.10'}
@@ -242,6 +242,14 @@ if !empty(glob('~/.vim/bundle/nerdtree'))
     let NERDTreeHighlightCursorline = 1
     let NERDTreeShowBookmarks = 1
     let NERDTreeShowFiles = 1
+    let NERDTreeShowHidden = 1
+    " close vim if the only window left open is a NERDTree
+    autocmd BufEnter * if (winnr("$") == 1
+                \ && exists("b:NERDTree")
+                \ && b:NERDTree.isTabTree()) | q | endif
+    " open a NERDTree when vim starts up if no files were specified
+    autocmd StdinReadPre * let s:std_in=1
+    autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 endif
 
 " Signify
