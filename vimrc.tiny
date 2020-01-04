@@ -1,0 +1,7 @@
+set virtualedit=onemore
+set nocompatible
+set backspace=eol,start,indent
+set list!
+set listchars=tab:▸\ ,trail:•,extends:»,precedes:«
+set visualbell t_vb=
+set tabstop=4 softtabstop=4 shiftwidth=4
