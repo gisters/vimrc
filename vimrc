@@ -36,7 +36,7 @@ endif
 call plug#begin('$HOME/.vim/bundle')
 Plug 'vim-scripts/Modeliner', {'tag': '0.3.0'}
 Plug 'ervandew/supertab', {'tag': '2.1'}
-Plug 'scrooloose/nerdtree', {'tag': '6.4.3'}
+Plug 'scrooloose/nerdtree', {'tag': '6.4.4'}
 Plug 'tomasr/molokai'
 Plug 'aperezdc/vim-template'
 Plug 'vim-airline/vim-airline', {'tag': 'v0.11'}
@@ -50,7 +50,7 @@ Plug 'hail2u/vim-css3-syntax', {'tag': 'v1.4.0'}
 Plug 'plasticboy/vim-markdown'
 Plug 'pangloss/vim-javascript', {'tag': '1.2.5.1'}
 Plug 'hdima/python-syntax', {'tag': 'r3.5.0'}
-Plug 'fatih/vim-go', {'tag': 'v1.21'}
+Plug 'fatih/vim-go', {'tag': 'v1.22-rc.1'}
 call plug#end()
 
 " global
