@@ -44,6 +44,7 @@ Plug 'godlygeek/tabular', {'tag': '1.0.0'}
 Plug 'tpope/vim-fugitive', {'tag': 'v3.2'}
 Plug 'mhinz/vim-signify', {'tag': 'v1.9'}
 
+Plug 'ekalinin/Dockerfile.vim'
 Plug 'elzr/vim-json'
 Plug 'darfink/vim-plist'
 Plug 'hail2u/vim-css3-syntax', {'tag': 'v1.7.0'}
