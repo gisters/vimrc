@@ -39,6 +39,14 @@ catch
     colorscheme default
 endtry
 
+" template
+if !empty(glob('~/.vim/plugged/vim-template'))
+    " let g:templates_plugin_loaded = 1
+    " let g:templates_no_autocmd = 1
+    let g:username = "Register"
+    let g:license = "GPLv3"
+endif
+
 " airline
 if !empty(glob('~/.vim/plugged/vim-airline'))
     "nnoremap <tab>          :bnext<CR>
@@ -137,8 +145,5 @@ if !empty(glob('~/.vim/plugged/vim-go'))
     let g:go_fmt_fail_silently = 1
     let g:go_fmt_autosave = 0
 endif
-
-" Other config
-silent! so $HOME/.vim/vimrc.mine
 
 " vim: set et fenc=utf-8 ff=unix sts=4 sw=4 ts=4 :
