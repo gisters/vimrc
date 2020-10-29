@@ -35,6 +35,7 @@ try
     set t_Co=256
     colorscheme molokai
     let g:molokai_original = 1
+    hi  Visual  ctermbg=238
 catch
     colorscheme default
 endtry
