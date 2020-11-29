@@ -17,7 +17,7 @@ Plug 'aperezdc/vim-template'
 Plug 'vim-airline/vim-airline', {'tag': 'v0.11'}
 Plug 'godlygeek/tabular', {'tag': '1.0.0'}
 Plug 'tpope/vim-fugitive', {'tag': 'v3.2'}
-Plug 'mhinz/vim-signify', {'tag': 'legacy'}
+Plug 'mhinz/vim-signify', {'tag': 'stable'}
 
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'elzr/vim-json'
