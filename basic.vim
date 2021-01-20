@@ -15,8 +15,8 @@ if &compatible
     set nocompatible
 endif
 
-" MacOS italic
-if has("macunix")
+" MacOS & Unix italic
+if has("macunix") || has("unix")
     let &t_ZH="\e[3m"
     let &t_ZR="\e[23m"
 endif
