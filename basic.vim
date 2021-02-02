@@ -185,6 +185,9 @@ nnoremap \| :vsplit<cr>
 vnoremap s  :!sort<cr>
 vnoremap u  :!sort -u<cr>
 
+" Load color.vim
+silent! so $HOME/.vim/color.vim
+
 " Load plug.vim
 silent! so $HOME/.vim/extend-plug.vim
 
