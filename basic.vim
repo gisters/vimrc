@@ -185,4 +185,7 @@ nnoremap \| :vsplit<cr>
 vnoremap s  :!sort<cr>
 vnoremap u  :!sort -u<cr>
 
+" Load plug.vim
+silent! so $HOME/.vim/extend-plug.vim
+
 " vim: set et fenc=utf-8 ff=unix sts=4 sw=4 ts=4 :
