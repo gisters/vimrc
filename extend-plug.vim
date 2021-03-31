@@ -24,6 +24,7 @@ Plug 'plasticboy/vim-markdown'
 Plug 'pangloss/vim-javascript', {'tag': '1.2.5.1'}
 Plug 'hdima/python-syntax', {'tag': 'r3.5.0'}
 Plug 'fatih/vim-go', {'tag': 'v1.24'}
+Plug 'nfnty/vim-nftables'
 call plug#end()
 
 " template
