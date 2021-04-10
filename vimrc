@@ -186,8 +186,20 @@ nnoremap \| :vsplit<cr>
 vnoremap s  :!sort<cr>
 vnoremap u  :!sort -u<cr>
 
-" Load color.vim
-silent! so $HOME/.vim/color.vim
+" colorscheme
+try
+    if empty(glob('~/.vim/colors/lucario.vim'))
+        silent !curl -fLo $HOME/.vim/colors/lucario.vim --create-dirs
+                    \ https://raw.githubusercontent.com/raphamorim/lucario/master/colors/lucario.vim
+    endif
+    colorscheme lucario
+    hi CursorLineNr ctermfg=NONE ctermbg=236 cterm=bold guifg=NONE guibg=#405160 gui=NONE
+    hi SpecialKey   ctermfg=NONE ctermbg=NONE cterm=NONE guifg=#61bbc8 guibg=NONE gui=NONE
+    hi Comment      ctermfg=44 ctermbg=NONE cterm=italic guifg=#5c98cd guibg=NONE gui=italic
+    hi clear SignColumn
+catch
+    colorscheme default
+endtry
 
 " Load plug.vim
 silent! so $HOME/.vim/plugrc.vim
