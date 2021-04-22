@@ -13,7 +13,7 @@ Plug 'preservim/nerdtree', {'tag': '6.10.9'}
 Plug 'aperezdc/vim-template'
 Plug 'vim-airline/vim-airline', {'tag': 'v0.11'}
 Plug 'godlygeek/tabular', {'tag': '1.0.0'}
-Plug 'tpope/vim-fugitive', {'tag': 'v3.2'}
+Plug 'tpope/vim-fugitive', {'tag': 'v3.3'}
 Plug 'mhinz/vim-signify', {'tag': 'stable'}
 
 Plug 'ekalinin/Dockerfile.vim'
@@ -23,7 +23,7 @@ Plug 'hail2u/vim-css3-syntax', {'tag': 'v1.8.1'}
 Plug 'plasticboy/vim-markdown'
 Plug 'pangloss/vim-javascript', {'tag': '1.2.5.1'}
 Plug 'hdima/python-syntax', {'tag': 'r3.5.0'}
-Plug 'fatih/vim-go', {'tag': 'v1.24'}
+Plug 'fatih/vim-go', {'tag': 'v1.25'}
 Plug 'nfnty/vim-nftables'
 call plug#end()
 
