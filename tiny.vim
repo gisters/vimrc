@@ -1,3 +1,4 @@
+set nocompatible
 set encoding=utf-8
 scriptencoding utf-8
 set termencoding=utf-8
@@ -7,10 +8,6 @@ set fileformats=unix,dos,mac
 "set langmenu=zh_CN.UTF-8
 "set helplang=cn
 
-" Be iMproved, required
-if &compatible
-    set nocompatible
-endif
 set list!                           " Display unprintable characters
 set listchars=tab:▸\ ,trail:•,extends:»,precedes:«
 set backspace=eol,start,indent      " Allow backspace
